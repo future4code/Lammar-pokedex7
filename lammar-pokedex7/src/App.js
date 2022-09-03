@@ -10,9 +10,6 @@ function App() {
   return (
     <div>
        {/* <Rotas/> */}
-       <Home/>
-       <Pokedex/>
-       <PokedexDetails/>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export function Rotas () {
          <Routes>
             <Route path = "/" elements = {<Home/>}/>
             <Route path = "/addPoke" elements = {<Pokedex/>}/>
-            <Route path = "/addDetails" elements = {<PokedexDetails/>}/>
+            <Route path = "/pokeDetails" elements = {<PokedexDetails/>}/>
          </Routes>
         </BrowserRouter>
     )
