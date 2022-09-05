@@ -1,9 +1,15 @@
-import React from 'react'
+// import React from 'react'
+// import cardDetail from '../components/cardDetail'
 
-const PokedexDetails = () => {
-    return (
-        <p>Pokedex Details</p>
-    )
-}
+// const PokedexDetails = () => {
+//     return (
 
-export default PokedexDetails
+//         <container>
+//            <cardDetail/>
+//            <cardDetail/>
+//            <cardDetail/>
+//         </container>
+//     )
+// }
+
+// export default PokedexDetails;

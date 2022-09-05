@@ -9,7 +9,7 @@ import PokedexDetails from './pages/PokedexDetails';
 function App() {
   return (
     <div>
-       {/* <Rotas/> */}
+      <Home/>
     </div>
   );
 }
