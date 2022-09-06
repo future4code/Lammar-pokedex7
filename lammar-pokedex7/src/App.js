@@ -12,6 +12,7 @@ import PokedexDetails from './pages/PokedexDetails';
 function App() {
   return (
     <div>
+cards
        {/* <Rotas/> */}
        <Home/>
        <Pokedex/>
@@ -19,6 +20,9 @@ function App() {
        <Card/>
        <CardDetail/>
        <CardPokedex/>
+
+      <Home/>
+ master
     </div>
   );
 }

@@ -13,11 +13,15 @@ export function Rotas () {
          <Routes>
             <Route path = "/" elements = {<Home/>}/>
             <Route path = "/addPoke" elements = {<Pokedex/>}/>
+ cards
             <Route path = "/addDetails" elements = {<PokedexDetails/>}/>
             <Route path = "/addcard" elements = {<Card/>}/>
             <Route path = "/addCdetail" elements = {<CardDetail/>}/>
             <Route path = "addPokedex" elements = {<CardPokedex}/>
 
+
+            <Route path = "/pokeDetails" elements = {<PokedexDetails/>}/>
+ master
          </Routes>
         </BrowserRouter>
     )
