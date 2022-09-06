@@ -1,18 +1,10 @@
 import React from 'react';
-// import { Rotas } from './Rotas/routers';
-import Home from "./pages/Home"; 
-import Pokedex from './pages/Pokedex';
-import PokedexDetails from './pages/PokedexDetails';
-
-
+import { Rotas } from './Rotas/routers';
 
 function App() {
   return (
     <div>
-       {/* <Rotas/> */}
-       <Home/>
-       <Pokedex/>
-       <PokedexDetails/>
+       <Rotas/>
     </div>
   );
 }
