@@ -1,11 +1,13 @@
 import React from 'react';
+import  GlobalState  from './global/GlobalState';
 import { Rotas } from './Rotas/routers';
+
 
 function App() {
   return (
-    <div>
+    <GlobalState>
        <Rotas/>
-    </div>
+    </GlobalState>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import Home from "../pages/Home";
 import Pokedex from "../pages/Pokedex";
-import PokedexDetails from "../pages/PokedexDetails";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home/Home';
+import PokemonDetails from '../pages/PokemonDetails/PokemonDetails';
 
 export function Rotas () {
     return(
@@ -10,7 +10,7 @@ export function Rotas () {
          <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/addPoke" element={<Pokedex/>}/>
-            <Route path="/addDetails" element={<PokedexDetails/>}/>
+            <Route path="/pokeDetails/:name" element={<PokemonDetails/>}/>
          </Routes>
         </BrowserRouter>
     )
