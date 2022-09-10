@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import PokemonDetails from '../pages/PokemonDetails/PokemonDetails';
 
+
 export function Rotas () {
     return(
         <BrowserRouter>
@@ -11,6 +12,7 @@ export function Rotas () {
             <Route path="/" element={<Home/>}/>
             <Route path="/addPoke" element={<Pokedex/>}/>
             <Route path="/pokeDetails/:name" element={<PokemonDetails/>}/>
+
          </Routes>
         </BrowserRouter>
     )
