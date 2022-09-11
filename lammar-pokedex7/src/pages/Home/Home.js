@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <>
          <Header 
-         title={"Lista de Pokémons"}
+         title={"Lista de Pokemons"}
          leftButtonFunction={()=>goToAddPoke(navigate)}/>
          
          <PokeHomeContainer>

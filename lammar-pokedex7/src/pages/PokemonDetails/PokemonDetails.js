@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Header } from '../../components/Header/Header'
 import GlobalStateContext from '../../global/GlobalStateContext'
 import { goToBack } from '../../Rotas/coordinator'
+import { DetailContainer, ContainerPoderes, ContainerAtaques, ContainerImg, TitleDetail } from './Style'
 
 const PokemonDetails = () => {
     const navigate = useNavigate()
@@ -22,14 +23,19 @@ const PokemonDetails = () => {
         leftButtonFunction={()=>goToBack(navigate)}
         showRightButton
         />
-        <div>
+        <TitleDetail>
+            {selectedPokemon&&selectedPokemon.types && selectedPokemon.types.map((type)=>{
+                return <p key={type.type.name}>{type.type.name}</p>
+            })}
+        </TitleDetail>
+        <DetailContainer>
             {selectedPokemon && selectedPokemon.sprites &&
-            <div>
-        <img src={selectedPokemon.sprites.front_default}/>
-        <img src={selectedPokemon.sprites.back_default}/>
-            </div>
+            <ContainerImg>
+                <img src={selectedPokemon.sprites.front_default}/>
+                <img src={selectedPokemon.sprites.back_default}/>
+            </ContainerImg>
              }
-            <div>
+            <ContainerPoderes>
                 <h1>Poderes</h1>
                 {selectedPokemon&&selectedPokemon.stats&&selectedPokemon.stats.map((stat)=>{
                     return (
@@ -37,26 +43,26 @@ const PokemonDetails = () => {
                           <strong>{stat.stat.name}</strong>{stat.base_stat}
                         </p>
                     )})}
-            </div>
+            </ContainerPoderes>
             <>
-            <>
+            {/* <>
             {selectedPokemon&&selectedPokemon.types && selectedPokemon.types.map((type)=>{
                 return <p key={type.type.name}>{type.type.name}</p>
             })}
-            </>
-            <>
+            </> */}
+            <ContainerAtaques>
             <h1>Principais ataques</h1>
             {selectedPokemon && selectedPokemon.moves && selectedPokemon.moves.map((move, index) =>{
                 return(
                     index < 5 && <p key={move.move.name}>{move.move.name}</p>
                 )
             })}
+            </ContainerAtaques>
             </>
-            </>
-        </div>
+        </DetailContainer>
         </>
     )
 
 }
 
-export default PokemonDetails
+export default PokemonDetails;

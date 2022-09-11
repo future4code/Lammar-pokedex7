@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToAddPoke } from "../../Rotas/coordinator";
+import { ButtonLeft, ButtonRight, HeaderPoke, HeaderTitle } from "./styled"; 
 
 export function Header({title, leftButtonFunction, showRightButton}){
     const navigate = useNavigate()
@@ -9,21 +10,21 @@ export function Header({title, leftButtonFunction, showRightButton}){
         switch (title) {
             case "Lista de Pokémons":
                 return "Ir para Pokedex";
-            case "Pokédex":
-                return "Voltar para lista de pokémons";
+            case "Pokedex":
+                return "Voltar para lista de Pokemons";
             default:
                 return "Voltar"
         }
     }
     return(
-        <>
-        <button onClick={leftButtonFunction}>
-            {leftButtonTitle}
-        </button>
-        <h1>{title}</h1>
-        {showRightButton && 
-        <button onClick={() => goToAddPoke(navigate)}>Ir para Pokédex</button>}
-        
-        </>
+        <HeaderPoke>
+            <ButtonLeft onClick={leftButtonFunction}>
+                {leftButtonTitle}
+            </ButtonLeft>
+            <HeaderTitle>{title}</HeaderTitle>
+            {<ButtonRight onClick={() => goToAddPoke(navigate)}>Ir para Pokedex</ButtonRight>}
+            {/* {showRightButton && 
+            <ButtonRight onClick={() => goToAddPoke(navigate)}>Ir para Pokedex</ButtonRight>} */}
+        </HeaderPoke>
     )
 }

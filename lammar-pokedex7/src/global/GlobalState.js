@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { BASE_URL } from "../constants/constants";
+import { BASE_URL } from "../Constants/constants";
 import GlobalStateContext from "./GlobalStateContext";
 
 const GlobalState = (props) =>{
@@ -47,4 +47,4 @@ const GlobalState = (props) =>{
         </GlobalStateContext.Provider>
     )
 }
-export default GlobalState
+export default GlobalState;
