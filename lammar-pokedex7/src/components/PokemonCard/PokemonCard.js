@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import GlobalStateContext from "../../global/GlobalStateContext";
 import { goToPokemonDetails } from "../../Rotas/coordinator";
+import { ButtonCardRemoveAdd, ButtonCardDetail, CardPokeContainer } from "./styled";
+import { CardImage } from "./styled";
 
 
 const PokemonCard = ({pokemon, isPokedex}) =>{
@@ -35,17 +37,17 @@ const PokemonCard = ({pokemon, isPokedex}) =>{
     }
 
     return(
-        <>
-        <img src={pokemon.sprites && pokemon.sprites.front_default} 
+        <CardPokeContainer>
+        <CardImage src={pokemon.sprites && pokemon.sprites.front_default} 
         alt={pokemon.name}/>
 
-        <button onClick={isPokedex ? removeFromPokedex : addToPokedex}>
-            {isPokedex ? "Remover da Pokédex" : "Adicionar a Pokédex"}
-        </button>
+        <ButtonCardRemoveAdd onClick={isPokedex ? removeFromPokedex : addToPokedex}>
+            {isPokedex ? "Remover da Pokedex" : "Adicionar a Pokedex"}
+        </ButtonCardRemoveAdd>
 
-        <button onClick={()=>{goToPokemonDetails(navigate, pokemon.name)}}>Ver detalhes</button>
+        <ButtonCardDetail onClick={()=>{goToPokemonDetails(navigate, pokemon.name)}}>Ver detalhes</ButtonCardDetail>
        
-        </>
+        </CardPokeContainer>
     )
 }
 export default PokemonCard;
