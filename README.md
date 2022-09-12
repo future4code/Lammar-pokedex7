@@ -1,11 +1,11 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Caroline Marques 
+- Jucicrede Machado
+- Zeneth Nunes de Souza
 
-Link do Surge: www.link.com.br
+Link do Surge: resolute-end.surge.sh
 
 O que funciona:
 - Item 1
